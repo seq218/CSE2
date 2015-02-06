@@ -2,7 +2,8 @@
 //February 6, 2015
 // CSE02-111
 //Purpose:
-    //_______________
+    //Determine the cost to purchase a certain number of Big Macs using 
+    //user inputted values for number of Big Macs, price per Big Mac, and sales tax
     
 import java.util.Scanner; //import scanner
 
