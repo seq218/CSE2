@@ -16,7 +16,7 @@ public class BigMac{
         myScanner= new Scanner( System.in ); //construct scanner
         System.out.print("Enter the number of Big Macs (as an integer >0):"); //prompt user for input value for number of Big Macs
         int nBigMacs= myScanner.nextInt(); //intalize and accept value inputed integer
-        System.out.print( "Enter the cost of a Big Mac as" + "a double (in the form xx.xx):" ); //prompt user to input price of Big Mac
+        System.out.print( "Enter the cost of a Big Mac as" + " a double (in the form xx.xx):" ); //prompt user to input price of Big Mac
         double bigMac$ = myScanner.nextDouble(); //intalize the price as a double 
 	    System.out.print("Enter the percent tax as a whole number (xx): "); //promp user to enter percent tax as a whole number 
         double taxRate = myScanner.nextDouble(); //intalize tax as a double
