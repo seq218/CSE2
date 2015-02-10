@@ -18,9 +18,10 @@ public class Root{
     double estimate2=(2*estimate1*estimate1*estimate1+number)/(3*estimate1*estimate1); //second estimate 
     double estimate3=(2*estimate2*estimate2*estimate2+number)/(3*estimate2*estimate2); //third estimate 
     double estimate4=(2*estimate3*estimate3*estimate3+number)/(3*estimate3*estimate3); //fourth estimate 
-    double cubeOfEstimate=estimate4*estimate4*estimate4;//check estimate of cube root 
-    System.out.println("The cube root is" +estimate4); //print cube root
-    System.out.println(+estimate4+ "*" +estimate4+ "*" +estimate4+ "=" +cubeOfEstimate); //print check of cube root 
+    double estimate5=(2*estimate4*estimate4*estimate4+number)/(3*estimate4*estimate4); //fifth estimate
+    double cubeOfEstimate=estimate5*estimate5*estimate5;//check estimate of cube root 
+    System.out.println("The cube root is " +estimate5); //print cube root
+    System.out.println(+estimate5+ "*" +estimate5+ "*" +estimate5+ "=" +cubeOfEstimate); //print check of cube root 
 }
 
 }
