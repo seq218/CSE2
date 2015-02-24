@@ -34,7 +34,9 @@ public class SpaceExploration{
             System.out.println("2001: First spacecraft lands on asteroid"); //print year 2001 and its fact 
         case 2000:
             System.out.println("2000: First spacecraft orbits an asteroid"); //print year 2000 and its fact 
-         
+            break; //break from switch
+        default:
+            System.out.println("Year is not in the interval"); //print error statement 
         
     }
     }
