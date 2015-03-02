@@ -17,7 +17,7 @@ public class SmileGenerator{
       int o=1; //inititialize o as 1 for part 4 
       int z= randGenerator.nextInt(99) + 1; //produce a random integer form 1 to 100 for part 2
       int c= randGenerator.nextInt(99) + 1; //produce a random integer from 1 to 100 for part 3
-      int t= randGenerator.nextInt(99) + 1; //produce a random integer from 1 to 100 for part 4
+      int t= randGenerator.nextInt(38) + 1; //produce a random integer from 1 to 100 for part 4
       
       System.out.println("Smiles for part 2: "+z); //print number of smiles for part 2
       System.out.println("Smiles for part 3: " +c); //print number of smiles for part 3
@@ -66,10 +66,11 @@ public class SmileGenerator{
         if(s>30){
             int r=s- 30; //find difference between the number and 30
             if(r>30){
+                int q=r- 30; //find difference between new number and 30
                 System.out.println(":):):):):):):):):):):):):):):):):):):):):):):):):):):):):):)"); //print 30 smiley faces
                 System.out.println(":):):):):):):):):):):):):):):):):):):):):):):):):):):):):):)"); //print 30 smiley faces
                 System.out.println(":):):):):):):):):):):):):):):):):):):):):):):):):):):):):):)"); //print 30 smiley faces
-                while(v<=r){
+                while(v<=q){
                     System.out.print(":)"); //print smiley face
                     v++; //increase value of v by one 
                 }
@@ -79,7 +80,7 @@ public class SmileGenerator{
                 System.out.println(":):):):):):):):):):):):):):):):):):):):):):):):):):):):):):)"); //print 30 smiley faces
                 while(v<=r){
                  System.out.print(":)"); //print smiley face
-                v++; //increase value of w by one 
+                v++; //increase value of v by one 
                 }
                 System.out.print("\n"); //print space
             }
@@ -89,7 +90,7 @@ public class SmileGenerator{
             System.out.println(":):):):):):):):):):):):):):):):):):):):):):):):):):):):):):)"); //print 30 smiley faces
             while(v<=s){
                  System.out.print(":)"); //print smiley face
-                v++; //increase value of w by one 
+                v++; //increase value of v by one 
             }
             System.out.print("\n"); //print space
         }
@@ -98,7 +99,7 @@ public class SmileGenerator{
     else{ //for when z is less than 30
      while(v<=c){ //as long as number of loop is less than the number produced
         System.out.print(":)"); //print smiley face
-         v++; //increase value of w by one 
+         v++; //increase value of v by one 
         }
     
         System.out.print("\n"); //print new line     
