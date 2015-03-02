@@ -103,7 +103,7 @@ public class SmileGenerator{
     
         System.out.print("\n"); //print new line     
         }
-    
+    System.out.print("\n"); //print new line
     
   System.out.println("Part4:"); //Indicate beginning of part 4  
     //have number of smiles increase by line 
