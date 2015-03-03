@@ -36,10 +36,8 @@ public class SmileGenerator{
 	        System.out.print(":)"); //print smiley face 
 	        x++; //add one to x 
             }
-        while(x<5); { //construct loop for when x<=5
-        System.out.print(":)"); //print smiley face
+        while(x<=5);  //construct loop for when x<=5
         
-        }
     System.out.print("\n"); //space between loops
    
    //while loop 
@@ -73,6 +71,7 @@ public class SmileGenerator{
                 while(v<=q){
                     System.out.print(":)"); //print smiley face
                     v++; //increase value of v by one 
+                    System.out.print("\n"); //produce new line 
                 }
             }
             else{
@@ -104,8 +103,9 @@ public class SmileGenerator{
     
         System.out.print("\n"); //print new line     
         }
-    System.out.print("\n"); //print new line
+
     
+  
   System.out.println("Part4:"); //Indicate beginning of part 4  
     //have number of smiles increase by line 
      String smiley=""; //space to create smiley face
