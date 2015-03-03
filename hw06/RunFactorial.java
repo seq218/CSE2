@@ -12,7 +12,7 @@ public class RunFactorial{
         System.out.println("Enter an integer between 9 and 16"); //prompt user to input number between 9 and 16
     while(i<=100){
         i++; //increment i
-        int integer=myScanner.nextInt(); //initialize integer 
+        double integer=myScanner.nextDouble(); //initialize integer 
         if(integer>=9 && integer<=16 && integer%1==0){
             int c=1; //initialize counter 
             long factorial=1; //initialize factorial
@@ -21,12 +21,12 @@ public class RunFactorial{
                 c++; //increment c
                 
             }
-            System.out.println(integer+"!="+factorial); //print results
+            System.out.println((int) integer+"!="+factorial); //print results
             break; //break 
             
         }
         else{
-            System.out.println("invalid input, try again"); //print invalid input
+            System.out.println("Invalid input, Try again"); //print invalid input
         }
     }
         
