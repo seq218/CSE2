@@ -17,7 +17,7 @@ public class zigzag{
 
  do{  
      int nStars=-1;
-while(nStars>30 ||nStars<3){
+while(nStars>33 ||nStars<3){
 
     System.out.println("Enter an integer between 3 and 33"); //prompt for new entry 
  
@@ -27,7 +27,7 @@ while(nStars>30 ||nStars<3){
         myScanner.next(); //take next integer
     }
     nStars=myScanner.nextInt();
-    if(nStars>=3 && nStars<=30){
+    if(nStars>=3 && nStars<=33){
         break; //break loop once nStars is between 3 and 30
     }
     System.out.println("Invalid entry"); //invalid entry
