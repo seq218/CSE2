@@ -81,9 +81,12 @@ public class RemoveElements{
  public static int[] remove(int[] list, int target){
     for(int j=0; j<list.length; j++){
         if(list[j]==target){
-            list=delete(list,j); 
-            continue; 
+            list=delete(list,j); //send to delete method to get rid of the element
+            continue; //continue through loop
           }
+         else{
+             //if element is not desired number, do nothing
+         }
         }
      return list; //return newNum to main method
 }
