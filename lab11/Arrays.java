@@ -42,13 +42,19 @@ public class Arrays{
         System.out.println("The maximum of array2 is "+array2[array2.length-1]); //print array2 max 
 
        //check for integer 
-        System.out.print("Enter a positive integer to continue"); //prompt user to enter an integer
-        int inputNumber=myScanner.nextInt(); //declare and initialize inputted value 
-        if(inputNumber>0){
+        System.out.print("Enter a positive integer to continue "); //prompt user to enter an integer
+        if(myScanner.hasNextInt()){
+            int inputNumber=myScanner.nextInt();
+            if(inputNumber>=0){
             binarySearch(array2, inputNumber); //run binary search method 
-        }
+            }
+            else{
+                System.out.println("You did not enter a positive integer");
+            }
+                
+            }
         else{
-            System.out.println("Integer is not positive"); 
+            System.out.println("You did not enter an integer"); 
         }
         
         }
