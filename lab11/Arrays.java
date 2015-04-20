@@ -43,8 +43,10 @@ public class Arrays{
 
        //check for integer 
         System.out.print("Enter a positive integer to continue "); //prompt user to enter an integer
+
+        int inputNumber;
         if(myScanner.hasNextInt()){
-            int inputNumber=myScanner.nextInt();
+            inputNumber=myScanner.nextInt();
             if(inputNumber>=0){
             binarySearch(array2, inputNumber); //run binary search method 
             }
@@ -56,30 +58,41 @@ public class Arrays{
         else{
             System.out.println("You did not enter an integer"); 
         }
-        
+    
         }
+    
         
 
 
 public static void binarySearch(int[] original, int key){
     int low=0; //initialize and declare low bound as 0
     int high=original.length-1; //initialize high bound as last element 
+    int c=0; //initialize counter to check if 
     while(high>= low){
-    int mid=(low+high)/2; //initialize and declare middle point 
+    int mid=(low+high)/2; 
     if(key<original[mid]){
         high=mid-1; }
     else if(key==original[mid]){
-        System.out.println(key+" was found in the list"); //if key is found 
+        System.out.println(key+" was found in the list"); 
+        c++; 
+        break;
     }
     else{
         low=mid+1;}
         
     }
+    if(c==1){
+       
+    }
+    else{
+        int temp=high;
+        high=low;
+        low=temp;
     System.out.println(key+" was not found in the list");
-    System.out.println("The number above the key was "+original[high]);
     System.out.println("The number below the key was "+original[low]); 
-    
+    System.out.println("The number above the key was "+original[high]);
+    }
+    }
 
-}
 
 }
