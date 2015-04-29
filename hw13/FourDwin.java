@@ -167,7 +167,7 @@ public class FourDwin{
             }
         }
      }
-     return array;
+     return array; //return array
  }
     
 }
