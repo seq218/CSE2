@@ -48,9 +48,10 @@ public class FourDwin{
         System.out.println("Original Array:"); //print header
         printArray(fourArray); //send to method to print 
         statArray(fourArray); //send to method for stats 
+        System.out.println("Sorted Array:(check code)"); //print header
         double[][][][] sortedArray= sort4DArray(fourArray); 
        printArray(sortedArray);
-       statArray(fourArray);
+       
     }
     
     public static double[][][][] createArray(int X, int Y){
@@ -126,20 +127,21 @@ public class FourDwin{
  public static double[][][][] sort4DArray(double[][][][] array){
      for(int x=0; x<array.length; x++){
          array[x]=sort3DArray(array[x]);
-         for(int y=0; y<array[x].length; y++){
+         for(int y=1; y<array[x].length; y++){
              double[][] temp=array[x][y];
              int w;
              for(w=y-1;w>=0&&temp.length<array[x][w].length;w--){
                  array[x][w+1]=array[x][w]; 
-                 }
-                 while(temp.length==array[x][w].length){
+                 
+                 if(temp.length==array[x][w].length){
                    if(array[x][y][0][0]>array[x][w][0][0]){
                        //swap
-                       temp=array[x][w];
+                       double[][] temp1=array[x][w];
                        array[x][w]=array[x][y];
-                       array[x][y]=temp;
+                       array[x][y]=temp1;
                    }
                  }
+             }
                  array[x][w+1]=temp; //swap if not equal
              }
          }
