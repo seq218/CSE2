@@ -126,25 +126,25 @@ public class FourDwin{
   } 
  public static double[][][][] sort4DArray(double[][][][] array){
      for(int x=0; x<array.length; x++){
-         array[x]=sort3DArray(array[x]);
-         for(int y=1; y<array[x].length; y++){
-             double[][] temp=array[x][y];
-             int w;
-             for(w=y-1;w>=0&&temp.length<array[x][w].length;w--){
-                 array[x][w+1]=array[x][w]; 
+         array[x]=sort3DArray(array[x]);}
+      for(int y=1; y<array.length; y++){
+        double[][][] temp=array[y];
+        int w;
+        for(w=y-1;w>=0&&temp.length>array[w].length;w--){
+                 array[w+1]=array[w]; 
                  
-                 if(temp.length==array[x][w].length){
-                   if(array[x][y][0][0]>array[x][w][0][0]){
+                 if(temp.length==array[w].length){
+                   if(array[y][0][0][0]>array[w][0][0][0]){
                        //swap
-                       double[][] temp1=array[x][w];
-                       array[x][w]=array[x][y];
-                       array[x][y]=temp1;
+                       double[][][] temp1=array[w];
+                       array[w]=array[y];
+                       array[y]=temp1;
                    }
                  }
              }
-                 array[x][w+1]=temp; //swap if not equal
+                 array[w+1]=temp; //swap if not equal
              }
-         }
+         
          return array;
      }
  
@@ -153,7 +153,7 @@ public class FourDwin{
      for (int a=0; a<array.length; a++){
         for(int b=0; b<array[a].length; b++){
             for(int c=0; c<array[a][b].length; c++){
-                double currentMin=array[a][b][c]; //make minimum
+                double currentMin=array[a][b][c]; //make minimum that will act as temps 
                 int index=c; //make index
                 for(int d=c+1; d<array[a][b].length; d++){
                     if(currentMin>array[a][b][d]){
