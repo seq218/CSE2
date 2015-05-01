@@ -96,6 +96,7 @@ public class FourDwin{
           System.out.println("}"); //print new line 
       }
       System.out.println("}");
+      System.out.println("Dimensions:"+q+"X"+r+"X"+s+"X"+t); //print dimensions
     }
  
   public static void statArray(double [][][][] array){
@@ -128,21 +129,24 @@ public class FourDwin{
      for(int x=0; x<array.length; x++){
          array[x]=sort3DArray(array[x]);}
       for(int y=1; y<array.length; y++){
+          array[y]=sort3DArray(array[y]);
         double[][][] temp=array[y];
         int w;
-        for(w=y-1;w>=0&&temp.length>array[w].length;w--){
-                 array[w+1]=array[w]; 
+        for(w=y-1;w>=0&&temp.length>=array[w].length;w--){
+            if(temp.length==array[w].length){
+                if(array[y][0][0][0]>array[w][0][0][0]){
+                    array[w+1]=array[w];
+                }
+                else{
+                }
+                break;
+            }
+            else{
+                 array[w+1]=array[w]; }
                  
-                 if(temp.length==array[w].length){
-                   if(array[y][0][0][0]>array[w][0][0][0]){
-                       //swap
-                       double[][][] temp1=array[w];
-                       array[w]=array[y];
-                       array[y]=temp1;
-                   }
-                 }
              }
                  array[w+1]=temp; //swap if not equal
+                 
              }
          
          return array;
