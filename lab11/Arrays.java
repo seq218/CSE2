@@ -47,19 +47,19 @@ public class Arrays{
         int inputNumber;
         if(myScanner.hasNextInt()){
             inputNumber=myScanner.nextInt();
-            if(inputNumber>=0){
+            if(inputNumber>=array2[0]&&inputNumber<=array2[array2.length-1]){
             binarySearch(array2, inputNumber); //run binary search method 
             }
             else{
-                System.out.println("You did not enter a positive integer");
+                System.out.println("You did not enter an integer within bounds");
             }
                 
             }
         else{
             System.out.println("You did not enter an integer"); 
         }
-    
-        }
+      
+    }
     
         
 
